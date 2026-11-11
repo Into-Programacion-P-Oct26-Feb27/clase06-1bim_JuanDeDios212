@@ -44,3 +44,11 @@ public class Ejemplo01 {
     }
 
 }
+
+
+/*
+    El usuario debe de ingresar el valor de 1 para indicar qeu quiere trabajar 
+con AND, luego se verifica si el número seleccionado es mayor a 0 y menor a 5.
+Luego se verifica que el numero es igual a 1, para que asi se muestre en la
+pantalla el texto "Trabajar con AND".
+*/
