@@ -18,6 +18,7 @@ public class Comercio021 {
         Scanner entrada = new Scanner(System.in);
         entrada.useLocale(Locale.US); // 10,2 / 10.2
 
+        String nombreEmpresa;
         String nombre;
         String apellido;
         int edad;
@@ -42,6 +43,10 @@ public class Comercio021 {
 
         System.out.println("Ingrese la edad por favor");
         edad = entrada.nextInt();
+        
+        entrada.nextLine();
+        System.out.println("Ingrese el nombre de la empresa por favor");
+        nombreEmpresa = entrada.nextLine();
 
         System.out.println("Ingrese el sueldo básico por favor");
         sueldoBasico = entrada.nextDouble();
@@ -88,7 +93,10 @@ public class Comercio021 {
                     if (region.equals("Insular")) {
                         porcentajeSeguro = 30;
                     } else {
-                        porcentajeSeguro = 0;
+                        porcentajeSeguro = 8; /* Se le asigna el porcentaje de 
+                        8 para que en el caso de que no sea ninguno de los se
+                        asigne un numero de forma segura
+                        */
                     }
                 }
             }
@@ -98,7 +106,7 @@ public class Comercio021 {
         sueldoFinal = adicionalSeguro + bono + sueldoBasico;
 
         System.out.printf(
-                "Reporte de Empleado EL GRAN COMERCIO\n\n"
+                "Reporte de Empleado %s\n\n"
                 + "Nombres: %s\n"
                 + "Apellidos: %s\n"
                 + "Edad: %d\n"
@@ -108,6 +116,7 @@ public class Comercio021 {
                 + "\tBono: $%.2f\n"
                 + "Adicional del seguro: $%.2f\n\n"
                 + "Sueldo final: $%.2f\n",
+                nombreEmpresa,
                 nombre,
                 apellido,
                 edad,
